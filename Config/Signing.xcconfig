@@ -1,0 +1,16 @@
+// Code signing for all targets.
+//
+// The default is an ad-hoc ("Sign to Run Locally") signature, which is enough for the
+// Quick Look extensions to load on the Mac that built them. No Apple Developer account needed.
+//
+// To sign with your own certificate instead, create Config/Local.xcconfig (git-ignored):
+//
+//     DEVELOPMENT_TEAM = ABCDE12345
+//     CODE_SIGN_IDENTITY = Apple Development
+
+CODE_SIGN_STYLE = Manual
+CODE_SIGN_IDENTITY = -
+DEVELOPMENT_TEAM =
+PROVISIONING_PROFILE_SPECIFIER =
+
+#include? "Local.xcconfig"
