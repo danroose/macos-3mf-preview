@@ -2,6 +2,8 @@ import SceneKit
 import simd
 
 enum SceneBuilder {
+    static let modelNodeName = "model"
+
     /// Builds a lit scene with the model centered at the origin, Y-up, sitting on the floor plane.
     static func scene(for mesh: ColoredMesh) -> (scene: SCNScene, radius: Float) {
         let scene = SCNScene()
@@ -48,6 +50,7 @@ enum SceneBuilder {
                                    elements: elements)
         geometry.materials = materials
         let node = SCNNode(geometry: geometry)
+        node.name = modelNodeName
         scene.rootNode.addChildNode(node)
 
         // Soft studio lighting: key, fill, rim and an ambient base.

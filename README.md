@@ -2,9 +2,10 @@
 
 Enables 3D previews in macOS for `.3mf` files.
 
-Select a `.3mf` file in Finder and press **Space** to see an interactive 3D view of the model in its real filament colors. Drag to rotate it and scroll to zoom. You can check a model without opening your slicer.
+Select a `.3mf` file in Finder and press **Space** to see an interactive 3D view of the model in its real filament colors. Drag or swipe to rotate it and pinch to zoom. You can check a model without opening your slicer.
 
 - **3D Quick Look preview:** rotate and zoom with the mouse or trackpad. The bottom corner shows the model's size in mm and its triangle count.
+- **Live Finder preview pane:** the model slowly spins on its own in the column-view or gallery-view side pane. Swipe with two fingers on the trackpad to rotate it yourself.
 - **Real colors:** reads filament colors and painted regions from Bambu Studio, OrcaSlicer and PrusaSlicer projects, plus standard 3MF material colors.
 - **Finder thumbnails:** icons show the plate image your slicer saved in the file, with no "3MF" badge on top. Files without a saved image get a 3D render instead.
 - **Fast:** a 100 MB, 1.3-million-triangle model opens in under half a second on Apple Silicon.
@@ -57,13 +58,14 @@ CODE_SIGN_IDENTITY = Apple Development
 
 | Action | Result |
 |---|---|
-| Select a `.3mf` in Finder, press **Space** | 3D preview |
-| Drag | Rotate |
-| Scroll or pinch | Zoom |
-| Select a `.3mf` in Finder's column or gallery view, or with the preview pane open (⇧⌘P) | The same 3D preview in the side pane |
+| Select a `.3mf` in Finder, press **Space** | 3D preview, spinning slowly until you touch it |
+| Drag, or two-finger swipe on a trackpad | Rotate |
+| Pinch | Zoom |
+| Select a `.3mf` in Finder's column or gallery view, or with the preview pane open (⇧⌘P) | The same 3D preview in the side pane, spinning |
+| Two-finger swipe over the preview pane | Rotate (click-drag in the pane drags the file instead; that's Finder's behavior) |
 | Icon or list view in Finder | Plate image thumbnails |
 
-Finder's file icons are static images. macOS only allows live, interactive content in the Quick Look panel and the preview pane.
+Any click, swipe or pinch stops the auto-spin. Finder's file icons are static images. macOS only allows live, interactive content in the Quick Look panel and the preview pane.
 
 ## Supported files
 
@@ -129,6 +131,8 @@ Shared/       Code used by both extensions:
   ThreeMFModel.swift      fast 3MF XML scanner, components, transforms, paint decoding
   SlicerSettings.swift    Bambu/Orca/Prusa extruder assignments and filament colors
   SceneBuilder.swift      flat-shaded SceneKit scene, lighting and camera
+  ModelView.swift         preview view: auto-spin and trackpad-swipe orbiting
+  PreviewSummary.swift    size and triangle-count caption
   SnapshotRenderer.swift  offscreen render for files without an embedded thumbnail
 Tests/        XCTest suite and synthetic 3MF fixtures (Tests/Fixtures/make_fixtures.py)
 Tools/        render-test command-line tool

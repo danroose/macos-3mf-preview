@@ -2,9 +2,10 @@ import Cocoa
 import Quartz
 import SceneKit
 
-/// Space-bar Quick Look preview: an interactive 3D view of the model (drag to orbit, scroll/pinch to zoom).
+/// Space-bar Quick Look preview: an interactive 3D view of the model (drag or two-finger swipe to orbit,
+/// pinch to zoom). Also hosted by Finder's preview pane, where it spins on its own.
 final class PreviewViewController: NSViewController, QLPreviewingController {
-    private let sceneView = SCNView()
+    private let sceneView = ModelView()
     private let status = NSTextField(labelWithString: "")
 
     override func loadView() {
@@ -49,6 +50,7 @@ final class PreviewViewController: NSViewController, QLPreviewingController {
                     self.sceneView.pointOfView = scene.rootNode.childNode(withName: "camera", recursively: false)
                     self.sceneView.defaultCameraController.target = SCNVector3Zero
                     self.status.stringValue = caption
+                    self.sceneView.startAutoSpin()
                     handler(nil)
                 }
             } catch {
