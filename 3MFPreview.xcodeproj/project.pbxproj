@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01C43878F8AED9C40FF3AE28 /* PreviewSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43E8A8B886A74F43F2C3A67 /* PreviewSummary.swift */; };
 		02F2E182A5DE695F439DB404 /* RenderingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D2A883C8F6EEA2ADCF7E6B /* RenderingTests.swift */; };
+		0304B6772355C07F090E6AA5 /* PreviewSummaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1388413B2A9747BCAA295F1 /* PreviewSummaryTests.swift */; };
 		08027C3BAAC648A56329FB5E /* ZipArchive.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FFC7D594BF64B05EA09A9E /* ZipArchive.swift */; };
+		10A969275A062B4E0DF85FC3 /* PreviewSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43E8A8B886A74F43F2C3A67 /* PreviewSummary.swift */; };
 		12AED71BFC9560BE494386EE /* 3MFPreviewQL.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = AFF62F0F1A04CFACCFF179CF /* 3MFPreviewQL.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1ADDBE25A7D66CEE4458F096 /* ThreeMFPreviewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9556374DF25634CFC2A4398C /* ThreeMFPreviewApp.swift */; };
 		20D1490434E7C60E43358F02 /* SnapshotRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8848076FEF5FBD268EAB24 /* SnapshotRenderer.swift */; };
@@ -23,6 +26,7 @@
 		7BB142E1BF2B494EF40DCB10 /* ThreeMFModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223E04166AD410A3423D0D44 /* ThreeMFModel.swift */; };
 		820645783C989DA1686E3BF2 /* ThreeMFModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223E04166AD410A3423D0D44 /* ThreeMFModel.swift */; };
 		8808B9FA5C07F881003772B7 /* 3MFThumbnail.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 46D861E6C00FD701B567DFA3 /* 3MFThumbnail.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8D6A045BAB44F2231DF4E9DE /* PreviewSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43E8A8B886A74F43F2C3A67 /* PreviewSummary.swift */; };
 		A7DDE40729C92EB1614D682B /* ThumbnailProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A21E9A57F8FC68892F1AF9 /* ThumbnailProvider.swift */; };
 		B9EC3E1ECBFC6A80860C573E /* SceneBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC3CD67F5B68ED0BB6C420D /* SceneBuilder.swift */; };
 		C5FA6E5B010B24934524ACE3 /* PaintDecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B4DB9E2C42ACE607114952 /* PaintDecoderTests.swift */; };
@@ -85,12 +89,14 @@
 		A33157E863E63BF5F1CD3DFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		AAE738DFEEFAF3216699746F /* ThreeMFModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeMFModelTests.swift; sourceTree = "<group>"; };
 		AFF62F0F1A04CFACCFF179CF /* 3MFPreviewQL.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = 3MFPreviewQL.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		C43E8A8B886A74F43F2C3A67 /* PreviewSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewSummary.swift; sourceTree = "<group>"; };
 		C8F5C99282EE16FCFCB443CD /* Thumbnail.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Thumbnail.entitlements; sourceTree = "<group>"; };
 		CAEC6FAFCFC040030E6DCF0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		DFC3CD67F5B68ED0BB6C420D /* SceneBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneBuilder.swift; sourceTree = "<group>"; };
 		E4A21E9A57F8FC68892F1AF9 /* ThumbnailProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailProvider.swift; sourceTree = "<group>"; };
 		E5FFC7D594BF64B05EA09A9E /* ZipArchive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipArchive.swift; sourceTree = "<group>"; };
 		E6D2A883C8F6EEA2ADCF7E6B /* RenderingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderingTests.swift; sourceTree = "<group>"; };
+		F1388413B2A9747BCAA295F1 /* PreviewSummaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewSummaryTests.swift; sourceTree = "<group>"; };
 		F316493293C99BD517828F26 /* TestSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSupport.swift; sourceTree = "<group>"; };
 		FA9D89FD8FB5F5C5F7F7476E /* 3MFPreviewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 3MFPreviewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -130,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				31B4DB9E2C42ACE607114952 /* PaintDecoderTests.swift */,
+				F1388413B2A9747BCAA295F1 /* PreviewSummaryTests.swift */,
 				E6D2A883C8F6EEA2ADCF7E6B /* RenderingTests.swift */,
 				F316493293C99BD517828F26 /* TestSupport.swift */,
 				AAE738DFEEFAF3216699746F /* ThreeMFModelTests.swift */,
@@ -155,6 +162,7 @@
 		D2DD01EEC9CD79F6C37B21A9 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				C43E8A8B886A74F43F2C3A67 /* PreviewSummary.swift */,
 				DFC3CD67F5B68ED0BB6C420D /* SceneBuilder.swift */,
 				161CC488B298F637FFFA4BE6 /* SlicerSettings.swift */,
 				2B8848076FEF5FBD268EAB24 /* SnapshotRenderer.swift */,
@@ -331,6 +339,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01C43878F8AED9C40FF3AE28 /* PreviewSummary.swift in Sources */,
 				615472A8D44C4F88F4E0B5D0 /* SceneBuilder.swift in Sources */,
 				5D2322A0B0052F2DFA45788B /* SlicerSettings.swift in Sources */,
 				20D1490434E7C60E43358F02 /* SnapshotRenderer.swift in Sources */,
@@ -345,6 +354,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5FA6E5B010B24934524ACE3 /* PaintDecoderTests.swift in Sources */,
+				8D6A045BAB44F2231DF4E9DE /* PreviewSummary.swift in Sources */,
+				0304B6772355C07F090E6AA5 /* PreviewSummaryTests.swift in Sources */,
 				02F2E182A5DE695F439DB404 /* RenderingTests.swift in Sources */,
 				B9EC3E1ECBFC6A80860C573E /* SceneBuilder.swift in Sources */,
 				37DC4FA5B0FABAEC40ACE392 /* SlicerSettings.swift in Sources */,
@@ -361,6 +372,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10A969275A062B4E0DF85FC3 /* PreviewSummary.swift in Sources */,
 				FD73000FF7D7CC1709E1A63A /* PreviewViewController.swift in Sources */,
 				559C725A09A20322D11C452B /* SceneBuilder.swift in Sources */,
 				E102D206C3358B47F907D4C8 /* SlicerSettings.swift in Sources */,

@@ -60,7 +60,10 @@ CODE_SIGN_IDENTITY = Apple Development
 | Select a `.3mf` in Finder, press **Space** | 3D preview |
 | Drag | Rotate |
 | Scroll or pinch | Zoom |
-| Icon or gallery view in Finder | Plate image thumbnails |
+| Select a `.3mf` in Finder's column or gallery view, or with the preview pane open (⇧⌘P) | The same 3D preview in the side pane |
+| Icon or list view in Finder | Plate image thumbnails |
+
+Finder's file icons are static images. macOS only allows live, interactive content in the Quick Look panel and the preview pane.
 
 ## Supported files
 
@@ -147,3 +150,7 @@ Each triangle's color is resolved in this order:
 The resulting extruder number is then looked up in the slicer's filament color list.
 
 The preview flattens the mesh into one SceneKit geometry per color, with flat face normals so printed facets stay crisp. It converts the slicer's Z-up coordinates to SceneKit's Y-up.
+
+## License
+
+[MIT](LICENSE) © Dan Roose

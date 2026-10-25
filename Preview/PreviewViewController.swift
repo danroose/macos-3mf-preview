@@ -20,6 +20,8 @@ final class PreviewViewController: NSViewController, QLPreviewingController {
         status.translatesAutoresizingMaskIntoConstraints = false
         status.textColor = .secondaryLabelColor
         status.font = .systemFont(ofSize: 11)
+        status.lineBreakMode = .byTruncatingTail
+        status.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
         root.addSubview(status)
 
         NSLayoutConstraint.activate([
@@ -28,6 +30,7 @@ final class PreviewViewController: NSViewController, QLPreviewingController {
             sceneView.topAnchor.constraint(equalTo: root.topAnchor),
             sceneView.bottomAnchor.constraint(equalTo: root.bottomAnchor),
             status.leadingAnchor.constraint(equalTo: root.leadingAnchor, constant: 10),
+            status.trailingAnchor.constraint(lessThanOrEqualTo: root.trailingAnchor, constant: -10),
             status.bottomAnchor.constraint(equalTo: root.bottomAnchor, constant: -8),
         ])
         view = root
@@ -40,14 +43,12 @@ final class PreviewViewController: NSViewController, QLPreviewingController {
                 let mesh = try ThreeMFModel(url: url).buildMesh()
                 guard !mesh.isEmpty else { throw CocoaError(.fileReadCorruptFile) }
                 let (scene, _) = SceneBuilder.scene(for: mesh)
-                let size = mesh.boundsMax - mesh.boundsMin
+                let caption = PreviewSummary.caption(for: mesh)
                 DispatchQueue.main.async {
                     self.sceneView.scene = scene
                     self.sceneView.pointOfView = scene.rootNode.childNode(withName: "camera", recursively: false)
                     self.sceneView.defaultCameraController.target = SCNVector3Zero
-                    self.status.stringValue = String(format: "%.1f × %.1f × %.1f mm · %@ triangles",
-                                                     size.x, size.y, size.z,
-                                                     NumberFormatter.localizedString(from: mesh.triangleCount as NSNumber, number: .decimal))
+                    self.status.stringValue = caption
                     handler(nil)
                 }
             } catch {
