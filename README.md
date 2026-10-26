@@ -4,6 +4,28 @@ Enables 3D previews in macOS for `.3mf` files.
 
 Select a `.3mf` file in Finder and press **Space** to see an interactive 3D view of the model in its real filament colors. Drag or swipe to rotate it and pinch to zoom. You can check a model without opening your slicer.
 
+![Quick Look 3D preview of a multicolor dragon pint holder, spinning](docs/media/quicklook-spin.gif)
+
+## See it in action
+
+**Press Space for a 3D preview.** Drag to rotate and pinch to zoom. The caption shows the model's size and triangle count.
+
+![Quick Look preview window with the multicolor dragon model](docs/media/quicklook-preview.png)
+
+**Finder's preview pane.** In column or gallery view, the selected model spins on its own. Swipe with two fingers to turn it.
+
+![Finder column view with the dragon spinning in the preview pane](docs/media/finder-preview-pane.gif)
+
+![Finder column view with the 3D preview pane](docs/media/finder-preview-pane.png)
+
+**Thumbnails without a badge.** Icons show the plate image the slicer saved, with no "3MF" label over it.
+
+![Finder icon view of several dragon .3mf files with plate thumbnails](docs/media/finder-thumbnails.png)
+
+<sub>Model: [Diego the Ice Pint Holding Dragon](https://lehadesign.club) by Leha Design, shown for demonstration.</sub>
+
+## Features
+
 - **3D Quick Look preview:** rotate and zoom with the mouse or trackpad. The bottom corner shows the model's size in mm and its triangle count.
 - **Live Finder preview pane:** the model slowly spins on its own in the column-view or gallery-view side pane. Swipe with two fingers on the trackpad to rotate it yourself.
 - **Real colors:** reads filament colors and painted regions from Bambu Studio, OrcaSlicer and PrusaSlicer projects, plus standard 3MF material colors.
